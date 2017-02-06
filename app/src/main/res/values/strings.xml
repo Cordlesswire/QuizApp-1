@@ -8,4 +8,11 @@
     <string name="resultQ1"></string>
     <string name="points">Points: 0/4</string>
     <string name="reset">Reset</string>
+    <string name="q2">Question 2: You can assign numeric value to String variable.</string>
+    <string name="q2Answer1">true</string>
+    <string name="q2Answer2">false</string>
+    <string name="q3">Question 3: Select all true statements</string>
+    <string name="q3Answer1">Strings.xml stores data about images.</string>
+    <string name="q3Answer2">To add another language to your app you can use Translations Editor</string>
+    <string name="q3Answer3">Java code is stored in AndroidManifest.xml file</string>
 </resources>
