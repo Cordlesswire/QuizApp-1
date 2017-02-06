@@ -15,4 +15,6 @@
     <string name="q3Answer1">Strings.xml stores data about images.</string>
     <string name="q3Answer2">To add another language to your app you can use Translations Editor</string>
     <string name="q3Answer3">Java code is stored in AndroidManifest.xml file</string>
+    <string name="q4">Question 4: Declare integer variable "quantity" and initialize it with 4.</string>
+    <string name="tap">Tap to write</string>
 </resources>
