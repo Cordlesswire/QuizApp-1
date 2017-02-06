@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="points">Punkty: 0/4</string>
+    <string name="q1">Pytanie 1: Jakiego typu jest zmienna isSunny?</string>
+    <string name="q2">Pytanie 2: Możliwe jest przypisanie liczby to zmiennej typu String.</string>
+    <string name="q2Answer1">prawda</string>
+    <string name="q2Answer2">fałsz</string>
+    <string name="q3">Pytanie 3: Wybierz wszystkie prawdziwe.</string>
+    <string name="q3Answer1">Plik strings.xml przechowuje informacje o obrazach.</string>
+    <string name="q3Answer2">Aby dodać inny język do aplikacji możesz wykorzystać Translations Editor</string>
+    <string name="q3Answer3">Kod Java jest przechowywany w pliku AndroidManifest.xml</string>
+    <string name="q4">Pytanie 4: Zadeklaruj zmienną \"quantity\" typu integer i przypisz do niej wartość 4.</string>
+    <string name="submit">Sprawdź</string>
+    <string name="tap">Naciśnij by pisać.</string>
+</resources>
