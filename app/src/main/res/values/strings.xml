@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="submit">Submit</string>
+    <string name="q1">Question 1: What type is variable isSunny?</string>
+    <string name="q1Answer1">int</string>
+    <string name="q1Answer2">boolean</string>
+    <string name="q1Answer3">String</string>
+    <string name="resultQ1"></string>
+    <string name="points">Points: 0/4</string>
+    <string name="reset">Reset</string>
+</resources>
