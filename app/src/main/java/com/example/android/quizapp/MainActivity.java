@@ -25,11 +25,27 @@ public class MainActivity extends AppCompatActivity {
     static String wrong = "Wrong";
     static String correct = "Correct";
     boolean questionChecked = false;
+    CheckBox checkBox1;
+    CheckBox checkBox2;
+    CheckBox checkBox3;
+    TextView resultView;
+    TextView result1View;
+    TextView result2View;
+    TextView result3View;
+    TextView result4View;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        checkBox1 = (CheckBox) findViewById(R.id.q3Answer1);
+        checkBox2 = (CheckBox) findViewById(R.id.q3Answer2);
+        checkBox3 = (CheckBox) findViewById(R.id.q3Answer3);
+        resultView = (TextView) findViewById(R.id.resultView);
+        result1View = (TextView) findViewById(R.id.result1);
+        result2View = (TextView) findViewById(R.id.result2);
+        result3View = (TextView) findViewById(R.id.result3);
+        result4View = (TextView) findViewById(R.id.result4);
     }
 
     public void onSubmitClick(View view) {
@@ -65,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 result1 = wrong;
                 break;
         }
-        TextView result1View = (TextView) findViewById(R.id.result1);
         result1View.setText(result1);
         if (isCorrect)
             result1View.setTextColor(Color.GREEN);
@@ -91,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 result2 = wrong;
                 break;
         }
-        TextView result2View = (TextView) findViewById(R.id.result2);
         result2View.setText(result2);
         if (isCorrect)
             result2View.setTextColor(Color.GREEN);
@@ -100,10 +114,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void question3Check() {
-        CheckBox checkBox1 = (CheckBox) findViewById(R.id.q3Answer1);
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.q3Answer2);
-        CheckBox checkBox3 = (CheckBox) findViewById(R.id.q3Answer3);
-        TextView result3View = (TextView) findViewById(R.id.result3);
         if (!checkBox1.isChecked() && checkBox2.isChecked() && !checkBox3.isChecked()) {
             result3View.setText(correct);
             points += 1;
@@ -117,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
     private void question4Check(){
         EditText editTextView = (EditText)findViewById(R.id.editTextView);
         String answer = editTextView.getText().toString();
-        TextView result4View = (TextView)findViewById(R.id.result4);
         if(answer.contains("int quantity = 4;")){
             result4View.setText(correct);
             points += 1;
@@ -131,17 +140,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateScore() {
-        TextView resultView = (TextView) findViewById(R.id.resultView);
         resultView.setText("Points: " + points + "/4");
     }
 
     public void onResetClick(View view) {
         questionChecked = false;
         points = 0;
-        //Checkbox cleanup
-        CheckBox checkBox1 = (CheckBox) findViewById(R.id.q3Answer1);
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.q3Answer2);
-        CheckBox checkBox3 = (CheckBox) findViewById(R.id.q3Answer3);
         checkBox1.setChecked(false);
         checkBox2.setChecked(false);
         checkBox3.setChecked(false);
@@ -151,9 +155,6 @@ public class MainActivity extends AppCompatActivity {
         radioGroup.clearCheck();
         radioGroup2.clearCheck();
         //TextViews cleanup
-        TextView result1View = (TextView) findViewById(R.id.result1);
-        TextView result2View = (TextView) findViewById(R.id.result2);
-        TextView result3View = (TextView) findViewById(R.id.result3);
         result1View.setText("");
         result2View.setText("");
         result3View.setText("");
