@@ -10,8 +10,12 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static android.R.attr.checked;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+import static android.widget.Toast.makeText;
 import static com.example.android.quizapp.R.id.default_activity_button;
 import static com.example.android.quizapp.R.id.radio;
 import static com.example.android.quizapp.R.id.radioGroup;
@@ -141,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateScore() {
         resultView.setText("Points: " + points + "/4");
+        Toast toast =Toast.makeText(this,"Points: " + points, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public void onResetClick(View view) {
@@ -158,7 +164,6 @@ public class MainActivity extends AppCompatActivity {
         result1View.setText("");
         result2View.setText("");
         result3View.setText("");
-
         updateScore();
     }
 
